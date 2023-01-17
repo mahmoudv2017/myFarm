@@ -43,6 +43,11 @@ const server = http.createServer((req, res) => {
   switch (pathname) {
     // Overview page
     case "/":
+      res.writeHead(200, {
+        "Content-type": "text/plain",
+      });
+      res.end("somethin wrong")
+    break;
     case "/overview":
       res.writeHead(200, {
         "Content-type": "text/html",
